@@ -17,6 +17,8 @@ else
   export PATH=${PATH}:/opt/puppetlabs/bin
   # Workaround to deploy puppet for beaker jobs
   sudo -E ln -sfn /opt/puppetlabs/bin/puppet /usr/sbin/puppet
+  # Workaround for new paths in puppet 4.x
+  export PATH=${PATH}:/opt/puppetlabs/puppet/bin
 fi
 
 export SCRIPT_DIR=$(cd `dirname $0` && pwd -P)
